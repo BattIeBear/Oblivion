@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RaidStrategyDef>
+		<defName>BattIeBear_HoraxAbductors</defName>
+		<workerClass>RaidStrategyWorker_ImmediateAttack</workerClass>
+		<selectionWeightPerPointsCurve>
+			<points>
+				<li>(0, 0)</li>
+			</points>
+		</selectionWeightPerPointsCurve>
+		<selectionWeightCurvesPerFaction>
+			<li>
+				<faction>HoraxCult</faction>
+				<selectionWeightPerPointsCurve>
+					<points>
+						<li>(0, 1)</li>
+					</points>
+				</selectionWeightPerPointsCurve>
+			</li>
+		</selectionWeightCurvesPerFaction>
+		<pointsFactorCurve>
+			<points>
+				<li>0, 0.75</li>
+				<li>10000, 0.6</li>
+			</points>
+		</pointsFactorCurve>
+		<arriveModes>
+			<li>EdgeWalkInGroups</li>
+			<li>EdgeWalkIn</li>
+		</arriveModes>
+		<letterLabelEnemy>Abductors</letterLabelEnemy>
+		<arrivalTextEnemy>They seek to abduct, enslave, or sacrifice your colonists in the name of their dark god.\n\nThey are attacking immediately.</arrivalTextEnemy>
+	</RaidStrategyDef>
+	
+</Defs>

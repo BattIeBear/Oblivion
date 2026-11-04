@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!--Nerve Spiker-->
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/ThingDef[defName="NerveSpiker"]/weaponTags</xpath>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="NerveSpiker"]</xpath>
+		<value>
+			<weaponTags Inherit="False">
+				<li>NerveSpiker</li>
+			</weaponTags>
+		</value>
+	</Operation>
+
+	<!--Monoswords-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="MeleeWeapon_MonoSword" or defName="MeleeWeapon_MonoSwordBladelink"]</xpath>
+		<value>
+			<weaponTags>
+				<li>Monosword</li>
+			</weaponTags>
+		</value>
+	</Operation>
+	
+</Patch>

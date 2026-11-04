@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RulePackDef>
+		<defName>BattIeBear_HoraxNamerUtility</defName>
+		<rulePack>
+			<rulesFiles>
+				<li>BattIeBear_FactionPre_Horax->Names/BattIeBear_FactionPre_Horax</li>
+				<li>BattIeBear_FactionSuf_Horax->Names/BattIeBear_FactionSuf_Horax</li>
+				<li>BattIeBear_SettPreStandard_Horax->Names/BattIeBear_SettPreStandard_Horax</li>
+				<li>BattIeBear_settSufStandard_Horax->Names/BattIeBear_settSufStandard_Horax</li>
+				<li>BattIeBear_SettPreGroup_Horax->Names/BattIeBear_SettPreGroup_Horax</li>
+				<li>BattIeBear_SettSufGroup_Horax->Names/BattIeBear_SettSufGroup_Horax</li>
+				<li>BattIeBear_SettPreCult_Horax->Names/BattIeBear_SettPreCult_Horax</li>
+				<li>BattIeBear_SettSufCult_Horax->Names/BattIeBear_SettSufCult_Horax</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>BattIeBear_NamerFactionHorax</defName>
+		<include>
+			<li>BattIeBear_HoraxNamerUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->[BattIeBear_FactionPre_Horax] [BattIeBear_FactionSuf_Horax]</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>BattIeBear_NamerSettlementHorax</defName>
+		<include>
+			<li>BattIeBear_HoraxNamerUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->[BattIeBear_SettPreStandard_Horax] [BattIeBear_settSufStandard_Horax]</li>
+				<li>r_name->[BattIeBear_SettPreGroup_Horax] [BattIeBear_SettSufGroup_Horax]</li>
+				<li>r_name->[BattIeBear_SettPreCult_Horax] [BattIeBear_SettSufCult_Horax]</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+</Defs>

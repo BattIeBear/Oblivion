@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DutyDef>
+		<defName>BattIeBear_RitualLeader</defName>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="Oblivion_SlavesOfHorax.JobGiver_ConditionCauser_RitualLeader"/>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
+
+</Defs>

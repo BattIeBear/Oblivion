@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<JobDef>
+		<defName>BattIeBear_RitualLeader</defName>
+		<driverClass>Oblivion_SlavesOfHorax.JobDriver_ConditionCauser_RitualLeader</driverClass>
+		<reportString>performing a dark ritual.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+	</JobDef>
+	
+</Defs>

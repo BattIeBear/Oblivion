@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Set Up-->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+
+			<li Class="Oblivion_SlavesOfHorax.HoraxShowOnMap">
+				<Show Class="PatchOperationSequence">
+					<operations>
+						<!--Shows on Map-->
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/FactionDef[defName="HoraxCult"]/hidden</xpath>
+							<value>
+								<hidden>false</hidden>
+							</value>
+						</li>
+						<!--Allows for disabling-->
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/FactionDef[defName="HoraxCult"]/displayInFactionSelection</xpath>
+							<value>
+								<displayInFactionSelection>true</displayInFactionSelection>
+							</value>
+						</li>
+						<!--Allows Base Generation-->
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/FactionDef[defName="HoraxCult"]</xpath>
+							<value>
+								<!--Most factions == 1-->
+								<settlementGenerationWeight>1</settlementGenerationWeight>
+							</value>
+						</li>
+						<!--Names Settlements-->
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/FactionDef[defName="HoraxCult"]</xpath>
+							<value>
+								<settlementNameMaker>BattIeBear_NamerSettlementHorax</settlementNameMaker>
+							</value>
+						</li>
+						<!--Assigns Settlement Icon-->
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/FactionDef[defName="HoraxCult"]</xpath>
+							<value>
+								<settlementTexturePath>World/WorldObjects/Expanding/HoraxCult</settlementTexturePath>
+							</value>
+						</li>
+					</operations>
+				</Show>
+			</li>
+
+			<!--Adds namer-->
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/FactionDef[defName="HoraxCult"]/fixedName</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/FactionDef[defName="HoraxCult"]</xpath>
+				<value>
+					<factionNameMaker>BattIeBear_NamerFactionHorax</factionNameMaker>
+				</value>
+			</li>
+			<!--Set Leader-->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/FactionDef[defName="HoraxCult"]</xpath>
+				<value>
+					<leaderTitle>mouth of Horax</leaderTitle>
+					<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
+					<fixedLeaderKinds>
+						<li>BattIeBear_Horaxian_MouthOfOblivion</li>
+					</fixedLeaderKinds>
+				</value>
+			</li>
+			<!--Bloodfeeders Revered-->
+			<li Class="Oblivion_SlavesOfHorax.HoraxWorshipsBloodfeeders">
+				<HoraxBloodfeeders Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="HoraxCult"]/forcedMemes</xpath>
+					<value>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Bloodfeeding</li>
+					</value>
+				</HoraxBloodfeeders>
+			</li>
+
+		</operations>
+	</Operation>
+<!--
+Underthrall       | Void Martyr 10%
+Gunner            | None
+Abductor          | None
+Highthrall Melee  | 20%
+Highthrall        | 10%
+Orator            | 33%
+Mouth of Oblivion | 100%
+-->
+	<!-- Set Up Groups-->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+
+			<!--Remove Normal Group-->
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/FactionDef[defName="HoraxCult"]/pawnGroupMakers</xpath>
+			</li>
+			<!--Add Compatible Groups-->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/FactionDef[defName="HoraxCult"]</xpath>
+				<value>
+					<pawnGroupMakers Inherit="False">
+						<!--1 raider squads-->
+						<li>
+							<kindDef>Combat</kindDef>
+							<commonality>100</commonality>
+							<options>
+								<Horaxian_Underthrall>12</Horaxian_Underthrall>
+								<Horaxian_Gunner>8</Horaxian_Gunner>
+								<BattIeBear_Horaxian_Abductor>1</BattIeBear_Horaxian_Abductor>
+								<BattIeBear_Horaxian_MeleeHighthrall>4</BattIeBear_Horaxian_MeleeHighthrall>
+								<Horaxian_Highthrall>4</Horaxian_Highthrall>
+							</options>
+						</li>
+						<li>
+							<kindDef>Shamblers</kindDef>
+							<commonality>100</commonality>
+							<options>
+								<BattIeBear_HoraxianShambler>1</BattIeBear_HoraxianShambler>
+							</options>
+						</li>
+						<!--2 Ritual Siege squads-->
+						<li>
+							<kindDef>PsychicRitualSiege</kindDef>
+							<commonality>100</commonality>
+							<options>
+								<Horaxian_Underthrall>12</Horaxian_Underthrall>
+								<Horaxian_Gunner>4</Horaxian_Gunner>
+								<Horaxian_Highthrall>2</Horaxian_Highthrall>
+								<BattIeBear_Horaxian_Orator>1</BattIeBear_Horaxian_Orator>
+							</options>
+						</li>
+						<li>
+							<kindDef>PsychicRitualSiege</kindDef>
+							<commonality>100</commonality>
+							<options>
+								<Horaxian_Underthrall>12</Horaxian_Underthrall>
+								<Horaxian_Gunner>4</Horaxian_Gunner>
+								<BattIeBear_Horaxian_MeleeHighthrall>2</BattIeBear_Horaxian_MeleeHighthrall>
+								<BattIeBear_Horaxian_Orator>1</BattIeBear_Horaxian_Orator>
+							</options>
+						</li>
+						<!--1 Settlement-->
+						<li>
+							<kindDef>Settlement</kindDef>
+							<commonality>100</commonality>
+							<options>
+								<Horaxian_Underthrall>36</Horaxian_Underthrall>
+								<Horaxian_Gunner>12</Horaxian_Gunner>
+								<BattIeBear_Horaxian_Abductor>1</BattIeBear_Horaxian_Abductor>
+								<Horaxian_Highthrall>6</Horaxian_Highthrall>
+								<BattIeBear_Horaxian_MeleeHighthrall>6</BattIeBear_Horaxian_MeleeHighthrall>
+								<BattIeBear_Horaxian_Orator>3</BattIeBear_Horaxian_Orator>
+							</options>
+						</li>
+					</pawnGroupMakers>
+				</value>
+			</li>
+			<li Class="Oblivion_SlavesOfHorax.HoraxUsesGhouls">
+				<HoraxGhouls Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="HoraxCult"]/pawnGroupMakers/li/options</xpath>
+					<value>
+						<BattIeBear_Horaxian_Ghoul>1</BattIeBear_Horaxian_Ghoul>
+					</value>
+				</HoraxGhouls>
+			</li>
+		</operations>
+
+	</Operation>
+
+</Patch>

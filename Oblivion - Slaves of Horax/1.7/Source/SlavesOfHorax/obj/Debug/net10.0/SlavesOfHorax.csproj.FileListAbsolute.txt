@@ -1,0 +1,13 @@
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.7\Assemblies\Debug\net10.0\SlavesOfHorax.deps.json
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.7\Assemblies\Debug\net10.0\SlavesOfHorax.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.7\Assemblies\Debug\net10.0\SlavesOfHorax.pdb
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.7\Source\SlavesOfHorax\obj\Debug\net10.0\SlavesOfHorax.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.7\Source\SlavesOfHorax\obj\Debug\net10.0\SlavesOfHorax.GeneratedMSBuildEditorConfig.editorconfig
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.7\Source\SlavesOfHorax\obj\Debug\net10.0\SlavesOfHorax.AssemblyInfoInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.7\Source\SlavesOfHorax\obj\Debug\net10.0\SlavesOfHorax.AssemblyInfo.cs
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.7\Source\SlavesOfHorax\obj\Debug\net10.0\SlavesOfHorax.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.7\Source\SlavesOfHorax\obj\Debug\net10.0\SlavesOfHorax.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.7\Source\SlavesOfHorax\obj\Debug\net10.0\refint\SlavesOfHorax.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.7\Source\SlavesOfHorax\obj\Debug\net10.0\SlavesOfHorax.pdb
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.7\Source\SlavesOfHorax\obj\Debug\net10.0\ref\SlavesOfHorax.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.7\Source\SlavesOfHorax\obj\Debug\net10.0\SlavesOf.BF88FA0E.Up2Date

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!--Brings Hightrall up to standards-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Horaxian_Highthrall"]/combatPower</xpath>
+		<value>
+			<combatPower>120</combatPower>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Horaxian_Highthrall"]/weaponMoney</xpath>
+		<value>
+			<weaponMoney>500~1200</weaponMoney>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Horaxian_Highthrall"]/weaponTags</xpath>
+		<value>
+			<weaponTags Inherit="False">
+				<li>IndustrialGunAdvanced</li>
+				<li>BattIeBear_Ranged_TwistedFleshHoraxian</li>
+				<li>BattIeBear_HeavyRanged_BioferriteHoraxian</li>
+				<li>BattIeBear_Ranged_BioferriteHoraxian</li>
+			</weaponTags>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Horaxian_Highthrall"]/startingHediffs/li[def="DeathRefusal"]</xpath>
+		<value>
+			<li>
+				<def>DeathRefusal</def>
+				<chance>0.10</chance>
+			</li>
+		</value>
+	</Operation>
+
+	<!--Makes Underthall use Flak not Robe and adjusts combat power-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Horaxian_Underthrall"]/combatPower</xpath>
+		<value>
+			<combatPower>100</combatPower>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Horaxian_Underthrall"]/specificApparelRequirements</xpath>
+		<value>
+			<specificApparelRequirements>
+				<li>
+					<bodyPartGroup>Torso</bodyPartGroup>
+					<alternateTagChoices>
+						<li>
+							<tag>BattIeBear_Horax_FlakVest</tag>
+							<chance>1</chance>
+						</li>
+					</alternateTagChoices>
+				</li>
+				<li>
+					<color>(85, 85, 85)</color>
+				</li>
+			</specificApparelRequirements>
+		</value>
+	</Operation>
+	<!--Slightly more will be nude-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Horaxian_Underthrall"]/nakedChance</xpath>
+		<value>
+			<nakedChance>0.75</nakedChance>
+		</value>
+	</Operation>
+	<!--Add Void Martyr-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PawnKindDef[defName="Horaxian_Underthrall"]/startingHediffs</xpath>
+		<value>
+			<li>
+				<def>BattIeBear_VoidMartyr</def>
+				<chance>0.10</chance>
+			</li>
+		</value>
+	</Operation>
+	
+	<!--Makes Underthall Gunner use Robe-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Horaxian_Gunner"]/specificApparelRequirements</xpath>
+		<value>
+			<specificApparelRequirements>
+				<li>
+					<bodyPartGroup>FullHead</bodyPartGroup>
+					<requiredTag>Horaxian</requiredTag>
+					<useRandomStyleDef>true</useRandomStyleDef>
+				</li>
+				<li>
+					<bodyPartGroup>Torso</bodyPartGroup>
+					<alternateTagChoices>
+						<li>
+							<tag>Robe</tag>
+							<chance>1</chance>
+						</li>
+					</alternateTagChoices>
+				</li>
+				<li>
+					<color>(85, 85, 85)</color>
+				</li>
+			</specificApparelRequirements>
+		</value>
+	</Operation>
+	<!--removes death refusal and void martyr from gunner and abductor-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Horaxian_Gunner" or defName="BattIeBear_Horaxian_Abductor"]/startingHediffs</xpath>
+		<value>
+			<startingHediffs Inherit="False">
+				<li>
+					<def>Inhumanized</def>
+				</li>
+				<li>
+					<def>Tentacle</def>
+					<chance>0.15</chance>
+				</li>
+				<li>
+					<def>BlissLobotomy</def>
+					<chance>0.05</chance>
+				</li>
+				<li>
+					<def>FleshWhip</def>
+					<chance>0.05</chance>
+				</li>
+			</startingHediffs>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PawnKindDef[defName="Horaxian_Gunner"]/startingHediffs</xpath>
+		<value>
+			<li>
+				<def>BattIeBear_VoidMartyr</def>
+				<chance>0.10</chance>
+			</li>
+		</value>
+	</Operation>
+	<!--Adds Extra Weapons-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PawnKindDef[defName="Horaxian_Gunner"]/weaponTags</xpath>
+		<value>
+			<li>BattIeBear_SimpleRanged_TwistedFleshHoraxian</li>
+			<li>BattIeBear_PiercerRifle_BioferriteHoraxian</li>
+		</value>
+	</Operation>
+	<!--None will be nude-->
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/PawnKindDef[defName="Horaxian_Gunner"]/nakedChance</xpath>
+	</Operation>
+
+	<!--Makes Orator and Mouth of Oblivion Bloodfeeders-->
+	<Operation Class="Oblivion_SlavesOfHorax.HoraxWorshipsBloodfeeders">
+		<HoraxBloodfeeders Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[defName="BattIeBear_Horaxian_MouthOfOblivion"]/xenotypeSet</xpath>
+					<value>
+						<xenotypeSet Inherit="False">
+							<xenotypeChances>
+								<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">1</Sanguophage>
+							</xenotypeChances>
+						</xenotypeSet>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="BattIeBear_Horaxian_Orator"]/xenotypeSet/xenotypeChances</xpath>
+					<value>
+						<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">.3</Sanguophage>
+					</value>
+				</li>
+			</operations>
+		</HoraxBloodfeeders>
+	</Operation>
+</Patch>
