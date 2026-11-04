@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="BioSynth_SlavesOfHorax.HoraxRaids">
+		<Raid Class="PatchOperationReplace">
+			<xpath>Defs/FactionDef[defName='HoraxCult']/raidsForbidden</xpath>
+			<value>
+				<raidsForbidden>false</raidsForbidden>
+			</value>
+		</Raid>
+		<NoRaid Class="PatchOperationReplace">
+			<xpath>Defs/FactionDef[defName='HoraxCult']/raidsForbidden</xpath>
+			<value>
+				<raidsForbidden>true</raidsForbidden>
+			</value>
+		</NoRaid>
+	</Operation>
+	
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/FactionDef[defName='HoraxCult']</xpath>
+		<value>
+			<disallowedRaidStrategies>
+				<li>ImmediateAttack</li>
+				<li>ImmediateAttackSmart</li>
+				<li>StageThenAttack</li>
+				<li>EmergeFromWater</li>
+				<li>ImmediateAttackSappers</li>
+				<li>ImmediateAttackBreaching</li>
+				<li>ImmediateAttackBreachingSmart</li>
+				<li>Siege</li>
+				<li>ShamblerAssault</li>
+			</disallowedRaidStrategies>
+		</value>
+	</Operation>
+
+
+	<!--Twisted Flesh Weaponry - Horax Cult Raiding-->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Twisted Flesh Weaponry - Horax Cult Raiding</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RaidStrategyDef[defName='ImmediateAttack']/selectionWeightCurvesPerFaction/li[faction="HoraxCult"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RaidStrategyDef[defName='ImmediateAttackSmart']/selectionWeightCurvesPerFaction/li[faction="HoraxCult"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RaidStrategyDef[defName='HoraxKidnapRaid']/selectionWeightCurvesPerFaction/li[faction="HoraxCult"]</xpath>
+				</li>
+
+			</operations>
+		</match>
+		<nomatch Class="PatchOperationReplace">
+			<xpath>Defs/FactionDef[defName='HoraxCult']/raidsForbidden</xpath>
+			<value>
+				<raidsForbidden>false</raidsForbidden>
+			</value>
+		</nomatch>
+	</Operation>
+
+</Patch>

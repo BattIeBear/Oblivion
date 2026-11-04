@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<Oblivion_SlavesOfHorax_ModName>Oblivion - Slaves of Horax</Oblivion_SlavesOfHorax_ModName>
+	<Oblivion_SlavesOfHorax_TopWarning>Changing these options will require restarting the game to apply. Some options may not apply or will cause errors unless starting a new game.</Oblivion_SlavesOfHorax_TopWarning>
+	<Oblivion_SlavesOfHorax_BottomWarning>Don't see the options you chose? Restart your game!</Oblivion_SlavesOfHorax_BottomWarning>
+
+	<Oblivion_SlavesOfHorax_Label1>These options modify the Horax faction and raids:</Oblivion_SlavesOfHorax_Label1>
+	<Oblivion_SlavesOfHorax_HoraxShowOnMap>Show Cults On Map:</Oblivion_SlavesOfHorax_HoraxShowOnMap>
+	<Oblivion_SlavesOfHorax_HoraxShowOnMapDesc>Spawns Horaxian cults on the map, allowing you to see them like any other faction. Useful if you want to take the fight to them!\n\nDo not apply mid-game.</Oblivion_SlavesOfHorax_HoraxShowOnMapDesc>
+	<Oblivion_SlavesOfHorax_HoraxWillDoRaids>Horax Will Raid:</Oblivion_SlavesOfHorax_HoraxWillDoRaids>
+	<Oblivion_SlavesOfHorax_HoraxWillDoRaidsDesc>Allows for Horaxian raids, instead of just ritual sieges and hate chants. Allows you to see them a bit more often.</Oblivion_SlavesOfHorax_HoraxWillDoRaidsDesc>
+	<Oblivion_SlavesOfHorax_HoraxOnlyBioferrite>Only Horax Uses Bioferrite:</Oblivion_SlavesOfHorax_HoraxOnlyBioferrite>
+	<Oblivion_SlavesOfHorax_HoraxOnlyBioferriteDesc>Causes the hellcat rife, plus the weapons added by VWE: Bioferrite, to only spawn naturally in Horaxian raids.\n\nThis does not include Incinerators, as its primary purpose is destroying Horaxian creations.</Oblivion_SlavesOfHorax_HoraxOnlyBioferriteDesc>
+	<Oblivion_SlavesOfHorax_HoraxUseGhouls>Horax Uses Ghouls:</Oblivion_SlavesOfHorax_HoraxUseGhouls>
+	<Oblivion_SlavesOfHorax_HoraxUseGhoulsDesc>Allows a small number of ghouls to spawn with Horaxian raids and rituals.</Oblivion_SlavesOfHorax_HoraxUseGhoulsDesc>
+	<Oblivion_SlavesOfHorax_HoraxBloodfeeders>Horax Worships Bloodfeeders:</Oblivion_SlavesOfHorax_HoraxBloodfeeders>
+	<Oblivion_SlavesOfHorax_HoraxBloodfeedersDesc>High-tier Horaxian Units will sometimes spawn as sanguophages, and their leader will always be a sanguophage. Compatible with VRE: Sanguophages.</Oblivion_SlavesOfHorax_HoraxBloodfeedersDesc>
+
+	<Oblivion_SlavesOfHorax_Label2>These options modify psychic ritual sieges:</Oblivion_SlavesOfHorax_Label2>
+	<Oblivion_SlavesOfHorax_RitualTypes>Allowed Rituals:</Oblivion_SlavesOfHorax_RitualTypes>
+	<Oblivion_AllowedRitualType_All>All</Oblivion_AllowedRitualType_All>
+	<Oblivion_AllowedRitualType_NoShamblers>No Shamblers</Oblivion_AllowedRitualType_NoShamblers>
+	<Oblivion_AllowedRitualType_NoFleshbeasts>No Fleshbeasts</Oblivion_AllowedRitualType_NoFleshbeasts>
+	<Oblivion_AllowedRitualType_AbductionOnly>Abduction Only</Oblivion_AllowedRitualType_AbductionOnly>
+	<Oblivion_SlavesOfHorax_RitualTypesDesc>Determines the available rituals.\n\nAll: They will use the vanilla Skip Abduction and Summon Fleshbeasts rituals, plus the new Summon Shamblers ritual.\n\nNo Shamblers: They will only use the vanilla rituals.\n\nNo Fleshbeasts: The vanilla Summon Fleshbeasts ritual will be replaced with the new Summon Shamblers ritual.\n\nAbduction Only: They will only use the Skip Abduction ritual.</Oblivion_SlavesOfHorax_RitualTypesDesc>
+	<Oblivion_SlavesOfHorax_RitualFleeStates>Cultists Leave After Ritual:</Oblivion_SlavesOfHorax_RitualFleeStates>
+	<Oblivion_RitualFleeState_Never>Never</Oblivion_RitualFleeState_Never>
+	<Oblivion_RitualFleeState_Always>Always</Oblivion_RitualFleeState_Always>
+	<Oblivion_RitualFleeState_AbductionOnly>Abduction Only</Oblivion_RitualFleeState_AbductionOnly>
+	<Oblivion_SlavesOfHorax_RitualFleeStatesDesc>Determines if Horaxians leave after completing rituals.\n\nNever: They attack immediately. This is the Vanilla behavior.\n\nAlways: They will leave immediately, grabbing any downed pawns along the way.\n\nAbduction Only: They will leave after performing the Skip Abduction ritual, taking any abducted pawns with them.</Oblivion_SlavesOfHorax_RitualFleeStatesDesc>
+	
+	<Oblivion_SlavesOfHorax_Label3>These options modify the cultists ability to set up off-map ritual sites:</Oblivion_SlavesOfHorax_Label3>
+	<Oblivion_SlavesOfHorax_DoRituals>Allow Off-Map Horax Rituals:</Oblivion_SlavesOfHorax_DoRituals>
+	<Oblivion_SlavesOfHorax_DoRitualsDesc>Cultists will occasionally create sites near your colony, conducting elaborate rituals that must be dealt with by sending a caravan to kill its invoker.</Oblivion_SlavesOfHorax_DoRitualsDesc>
+	<Oblivion_SlavesOfHorax_AllowSunFracture>Sun Fracture Ritual:</Oblivion_SlavesOfHorax_AllowSunFracture>
+	<Oblivion_SlavesOfHorax_AllowSunFractureDesc>Allows the cultists to conduct a ritual where they blot out the sun!\n\nSimilar to an eclipse or sunblocker event.</Oblivion_SlavesOfHorax_AllowSunFractureDesc>
+	<Oblivion_SlavesOfHorax_AllowMindFracture>Mind Fracture Ritual:</Oblivion_SlavesOfHorax_AllowMindFracture>
+	<Oblivion_SlavesOfHorax_AllowMindFractureDesc>Allows the cultists to conduct a ritual where they drive everyone else to the brink of madness!\n\nSimilar to a psychic drone or the hate chant event.</Oblivion_SlavesOfHorax_AllowMindFractureDesc>
+	<Oblivion_SlavesOfHorax_AllowGrayPall>Gray Pall Ritual:</Oblivion_SlavesOfHorax_AllowGrayPall>
+	<Oblivion_SlavesOfHorax_AllowGrayPallDesc>Allows the cultists to conduct a ritual that puts the landscape into a constant gray pall!</Oblivion_SlavesOfHorax_AllowGrayPallDesc>
+	<Oblivion_SlavesOfHorax_AllowDeathPall>Death Pall Ritual:</Oblivion_SlavesOfHorax_AllowDeathPall>
+	<Oblivion_SlavesOfHorax_AllowDeathPallDesc>Allows the cultists to conduct a ritual that puts the landscape into a constant death pall!</Oblivion_SlavesOfHorax_AllowDeathPallDesc>
+	<Oblivion_SlavesOfHorax_AllowBlindFog>Blind Fog Ritual:</Oblivion_SlavesOfHorax_AllowBlindFog>
+	<Oblivion_SlavesOfHorax_AllowBlindFogDesc>Allows the cultists to conduct a ritual that puts the landscape into a constant fog! Twisted silhouettes can be seen within.\n\nBlind Fog requires Odyssey; not having that DLC will make it a regular fog instead, though the other functionality will still work.</Oblivion_SlavesOfHorax_AllowBlindFogDesc>
+
+</LanguageData>

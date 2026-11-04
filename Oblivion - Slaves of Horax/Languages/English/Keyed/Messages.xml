@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Psychic rituals -->
+	<Message_BattIeBear_PsychicRitualFinished>{0_pawnsPluralDef} have finished their rituals and are leaving.</Message_BattIeBear_PsychicRitualFinished>
+	<Message_BattIeBear_PsychicRitualFinished_Abducting>{0_pawnsPluralDef} are taking who they can and fleeing!</Message_BattIeBear_PsychicRitualFinished_Abducting>
+    <LetterLabelMindFractureLevelIncreased>Mind Fracture intensifies</LetterLabelMindFractureLevelIncreased>
+	<LetterMindFractureLevelIncreased>The ritual is now emanating a more powerful kind of psychic drone. Every humanlike in the area now feels more disturbed, terrified, and paranoid.</LetterMindFractureLevelIncreased>
+  
+
+</LanguageData>

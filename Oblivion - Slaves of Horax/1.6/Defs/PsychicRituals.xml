@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--Horax Version of Summon Shamblers-->
+	<BioSynth_SlavesOfHorax.PsychicRitualDef_BattIeBear_SummonShamblers_AI>
+		<defName>BattIeBear_SummonShamblersAI</defName>
+		<label>draw shamblers</label>
+		<description>Create a psychic pulse which will draw a distant horde of animated corpses towards your local area. They attack any humans that they see, save for their dark masters.</description>
+		<outcomeDescription>The higher the ritual quality, the more shamblers that will appear.</outcomeDescription>
+		<letterAICompleteLabel>Shamblers drawing near</letterAICompleteLabel>
+		<letterAICompleteText>The cultists' magic is drawing these lifeless corpses, and directing them to attack your colony.\n\nAs they exhaust their strange energy, they will begin to collapse within hours.</letterAICompleteText>
+		<aiCastable>true</aiCastable>
+		<playerCastable>false</playerCastable>
+		<hoursUntilOutcome>4</hoursUntilOutcome>
+		<nonRequiredPawnsMayLeave>true</nonRequiredPawnsMayLeave>
+		<defenderRole>Defender</defenderRole>
+		<letterAIArrivedText>They intend to use a psychic ritual to draw rotting shamblers to attack you.</letterAIArrivedText>
+		<layerWhitelist>
+			<li>Surface</li>
+		</layerWhitelist>
+		<shamblersPointsFromThreatPointsCurve>
+			<points>
+				<li>(250, 100)</li>
+				<li>(1000, 300)</li>
+				<li>(5000, 600)</li>
+			</points>
+		</shamblersPointsFromThreatPointsCurve>
+	</BioSynth_SlavesOfHorax.PsychicRitualDef_BattIeBear_SummonShamblers_AI>
+
+
+</Defs>

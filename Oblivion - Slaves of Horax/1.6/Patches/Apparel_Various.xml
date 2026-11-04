@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!--Adjusts Flak Vest to be equipable by cultists-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="Apparel_FlakVest"]/apparel/tags</xpath>
+		<value>
+			<li>BattIeBear_Horax_FlakVest</li>
+		</value>
+	</Operation>
+
+</Patch>

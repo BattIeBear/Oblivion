@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<IncidentDef>
+		<defName>BattIeBear_RitualCauser</defName>
+		<label>ritual causer</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>IncidentWorker_GiveQuest_Map</workerClass>
+		<questScriptDef>BattIeBear_RitualCauser</questScriptDef>
+		<baseChance>0</baseChance>
+		<letterDef>NewQuest_ThreatBig</letterDef>
+		<baseChanceWithRoyalty>0.95</baseChanceWithRoyalty>
+		<category>ThreatBig</category>
+		<minThreatPoints>750</minThreatPoints>
+		<minPopulation>4</minPopulation>
+		<minRefireDays>30</minRefireDays>
+		<earliestDay>20</earliestDay>
+		<pointsScaleable>true</pointsScaleable>
+	</IncidentDef>
+	
+</Defs>

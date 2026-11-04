@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>BattIeBear_HoraxRitualSpot</defName>
+		<label>dark ritual spot</label>
+		<description>A spot for performing psychic rituals. Rituals can only be cast if the area around the ritual spot is unobstructed.</description>
+		<passability>Standable</passability>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<graphicData>
+			<texPath>Things/Building/HoraxRitualSpot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3, 3)</drawSize>
+		</graphicData>
+		<size>(3, 3)</size>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<selectable>true</selectable>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToBuild>0</WorkToBuild>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+	</ThingDef>
+
+</Defs>

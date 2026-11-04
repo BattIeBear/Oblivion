@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/GameConditionDef[defName="BattIeBear_SightlessFogRitual"]/weatherDef</xpath>
+			<value>
+				<weatherDef>BattIeBear_BlindFog</weatherDef>
+			</value>
+		</match>
+	</Operation>
+
+	<!-- Full Disable -->
+	
+	<Operation Class="BioSynth_SlavesOfHorax.DoOffMapRituals">
+		<No Class="PatchOperationReplace">
+			<xpath>Defs/IncidentDef[defName='BattIeBear_RitualCauser']/baseChanceWithRoyalty</xpath>
+			<value>
+				<baseChanceWithRoyalty>0</baseChanceWithRoyalty>
+			</value>
+		</No>
+	</Operation>
+	
+	<Operation Class="BioSynth_SlavesOfHorax.DoSunFracture">
+		<No Class="PatchOperationAdd">
+			<xpath>Defs/SitePartDef[defName='BattIeBear_SunFractureRitual']</xpath>
+			<value>
+				<tags Inherit ="False" />
+			</value>
+		</No>
+	</Operation>
+
+	<Operation Class="BioSynth_SlavesOfHorax.DoMindFracture">
+		<No Class="PatchOperationAdd">
+			<xpath>Defs/SitePartDef[defName='BattIeBear_MindFractureRitual']</xpath>
+			<value>
+				<tags Inherit ="False" />
+			</value>
+		</No>
+	</Operation>
+
+	<Operation Class="BioSynth_SlavesOfHorax.DoGrayPall">
+		<No Class="PatchOperationAdd">
+			<xpath>Defs/SitePartDef[defName='BattIeBear_ForceWeatherRitual_GrayPall']</xpath>
+			<value>
+				<tags Inherit ="False" />
+			</value>
+		</No>
+	</Operation>
+
+	<Operation Class="BioSynth_SlavesOfHorax.DoDeathPall">
+		<No Class="PatchOperationAdd">
+			<xpath>Defs/SitePartDef[defName='BattIeBear_ForceWeatherRitual_DeathPall']</xpath>
+			<value>
+				<tags Inherit ="False" />
+			</value>
+		</No>
+	</Operation>
+
+	<Operation Class="BioSynth_SlavesOfHorax.DoBlindFog">
+		<No Class="PatchOperationAdd">
+			<xpath>Defs/SitePartDef[defName='BattIeBear_SightlessFogRitual']</xpath>
+			<value>
+				<tags Inherit ="False" />
+			</value>
+		</No>
+	</Operation>
+
+</Patch>

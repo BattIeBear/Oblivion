@@ -1,0 +1,8 @@
+C:\Steam\steamapps\common\RimWorld\Mods\BioSynthetic - Slaves of Horax\1.6\Assemblies\BioSynthetic - Slaves of Horax.dll
+C:\Steam\steamapps\common\RimWorld\Mods\BioSynthetic - Slaves of Horax\1.6\Source\BioSynthetic - Slaves of Horax\obj\Debug\BioSynthetic - Slaves of Horax.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\BioSynthetic - Slaves of Horax\1.6\Source\BioSynthetic - Slaves of Horax\obj\Debug\BioSynthetic - Slaves of Horax.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\BioSynthetic - Slaves of Horax\1.6\Source\BioSynthetic - Slaves of Horax\obj\Debug\BioSynthetic - Slaves of Horax.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.6\Assemblies\BioSynthetic - Slaves of Horax.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.6\Source\BioSynthetic - Slaves of Horax\obj\Debug\BioSynthetic - Slaves of Horax.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.6\Source\BioSynthetic - Slaves of Horax\obj\Debug\BioSynthetic - Slaves of Horax.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Oblivion - Slaves of Horax\1.6\Source\BioSynthetic - Slaves of Horax\obj\Debug\BioSynthetic - Slaves of Horax.dll

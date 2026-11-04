@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ========================= BASE ========================= -->
+	<ThingDef Name="ConditionCauserBase_Ritual" Abstract="True" ParentName="ConditionCauserBase">
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>Standable</passability>
+		<blockWind>false</blockWind>
+		<pathCost Inherit="False" />
+		<fillPercent Inherit="False" />
+		<statBases Inherit="False">
+			<Flammability>0</Flammability>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<noRightClickDraftAttack>true</noRightClickDraftAttack>
+		<building>
+			<buildingTags Inherit="False" />
+			<claimable>false</claimable>
+			<deconstructible>false</deconstructible>
+			<destroySound Inherit="False" />
+		</building>
+		<comps Inherit="False" />
+		<size>(1, 1)</size>
+		<graphicData>
+			<texPath>Things/Building/HoraxRitualSpot_Blank</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<receivesSignals>true</receivesSignals>
+		<castEdgeShadows>false</castEdgeShadows>
+		<tickerType>Normal</tickerType>
+		<rotatable>false</rotatable>
+		<selectable>false</selectable>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<soundImpactDefault Inherit="False" />
+		<isMechClusterThreat>false</isMechClusterThreat>
+		<killedLeavings Inherit="False" />
+	</ThingDef>
+
+	<SitePartDef Name="ConditionCauserSitePartBase_Ritual" Abstract="True" ParentName="ConditionCauserSitePartBase">
+		<workerClass>SitePartWorker_ConditionCauser</workerClass>
+		<siteTexture>World/WorldObjects/Sites/Outpost</siteTexture>
+		<applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+		<expandingIconTexture>World/WorldObjects/Expanding/Sites/RitualSite</expandingIconTexture>
+		<wantsThreatPoints>true</wantsThreatPoints>
+		<badEvenIfNoMap>true</badEvenIfNoMap>
+		<gravShipsCanLandOn>true</gravShipsCanLandOn>
+		<tags Inherit ="False">
+			<li>QuestActiveThreat</li>
+			<li>BattIeBear_QuestRitualCauser</li>
+		</tags>
+	</SitePartDef>
+
+	<GenStepDef Name="ConditionCauserGenStepBase_Ritual" Abstract="True" ParentName="ConditionCauserGenStepBase">
+		<order>490</order>
+		<genStep Class="BioSynth_SlavesOfHorax.GenStep_ConditionCauser_Ritual">
+			<nearMapCenter>true</nearMapCenter>
+		</genStep>
+	</GenStepDef>
+
+	<!-- ========================= Sun fracture ========================= -->
+	<ThingDef ParentName="ConditionCauserBase_Ritual">
+		<defName>BattIeBear_SunFractureRitual</defName>
+		<label>sun fracture ritual</label>
+		<description>A powerful ritual which summons swarms of mechanites which blot out the sun.</description>
+		<comps>
+			<li Class="BioSynth_SlavesOfHorax.CompProperties_CausesGameCondition_Ritual">
+				<conditionDef>BattIeBear_SunFractureRitual</conditionDef>
+				<worldRange>9</worldRange>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<GameConditionDef>
+		<defName>BattIeBear_SunFractureRitual</defName>
+		<conditionClass>BioSynth_SlavesOfHorax.GameCondition_NoSunlight_Fractured</conditionClass>
+		<label>sun fracture ritual</label>
+		<description>A nearby ritual has plunged the landscape into darkness.</description>
+		<letterText>A ritual has plunged the landscape into darkness.</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<canBePermanent>true</canBePermanent>
+		<natural>false</natural>
+	</GameConditionDef>
+	
+	<SitePartDef ParentName="ConditionCauserSitePartBase_Ritual">
+		<defName>BattIeBear_SunFractureRitual</defName>
+		<label>sun fracture ritual</label>
+		<description>They are summoning swarms of mechanites which blot out the sun.</description>
+		<workerClass>BioSynth_SlavesOfHorax.SitePartWorker_ConditionCauser_Ritual_SunFracture</workerClass>
+		<conditionCauserDef>BattIeBear_SunFractureRitual</conditionCauserDef>
+		<excludesTags>
+			<li>Electrical</li>
+		</excludesTags>
+	</SitePartDef>
+
+	<GenStepDef ParentName="ConditionCauserGenStepBase_Ritual">
+		<defName>BattIeBear_SunFractureRitual</defName>
+		<linkWithSite>BattIeBear_SunFractureRitual</linkWithSite>
+	</GenStepDef>
+
+	<!-- ========================= Mind fracture ========================= -->
+	<ThingDef ParentName="ConditionCauserBase_Ritual">
+		<defName>BattIeBear_MindFractureRitual</defName>
+		<label>mind fracture ritual</label>
+		<description>A powerful ritual which sends a psychic drone through an orbital amplifier, affecting a whole region of the planet and driving everyone towards insanity. The effect is modulated by an individual's psychic sensitivity.</description>
+		<comps>
+			<li Class="BioSynth_SlavesOfHorax.CompProperties_CausesGameCondition_Ritual">
+				<conditionDef>BattIeBear_MindFractureRitual</conditionDef>
+				<worldRange>9</worldRange>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<GameConditionDef>
+		<defName>BattIeBear_MindFractureRitual</defName>
+		<conditionClass>BioSynth_SlavesOfHorax.GameCondition_PsychicEmanation_Ritual</conditionClass>
+		<label>mind fracture ritual</label>
+		<description>A nearby ritual is driving everyone nearby towards insanity!</description>
+		<letterText>A ritual is driving everyone towards insanity!</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<canBePermanent>true</canBePermanent>
+		<natural>false</natural>
+	</GameConditionDef>
+
+	<SitePartDef ParentName="ConditionCauserSitePartBase_Ritual">
+		<defName>BattIeBear_MindFractureRitual</defName>
+		<label>mind fracture ritual</label>
+		<description>They are sending a psychic drone through an orbital amplifier, affecting a whole region of the planet and driving everyone towards insanity. The effect is modulated by an individual's psychic sensitivity.</description>
+		<workerClass>BioSynth_SlavesOfHorax.SitePartWorker_ConditionCauser_Ritual_MindFracture</workerClass>
+		<conditionCauserDef>BattIeBear_MindFractureRitual</conditionCauserDef>
+		<excludesTags>
+			<li>Electrical</li>
+		</excludesTags>
+	</SitePartDef>
+
+	<GenStepDef ParentName="ConditionCauserGenStepBase_Ritual">
+		<defName>BattIeBear_MindFractureRitual</defName>
+		<linkWithSite>BattIeBear_MindFractureRitual</linkWithSite>
+	</GenStepDef>
+
+	 <!--========================= Force Gray Pall =========================--> 
+	<ThingDef ParentName="ConditionCauserBase_Ritual">
+		<defName>BattIeBear_ForceWeatherRitual_GrayPall</defName>
+		<label>gray pall ritual</label>
+		<description>A powerful ritual which causes an unnatural gray pall to cover the land.</description>
+		<comps>
+			<li Class="BioSynth_SlavesOfHorax.CompProperties_CausesGameCondition_Ritual">
+				<conditionDef>BattIeBear_ForceWeatherRitual_GrayPall</conditionDef>
+				<worldRange>9</worldRange>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<GameConditionDef>
+		<defName>BattIeBear_ForceWeatherRitual_GrayPall</defName>
+		<conditionClass>BioSynth_SlavesOfHorax.GameCondition_ForceWeather_Unnatural</conditionClass>
+		<label>gray pall ritual</label>
+		<description>A nearby ritual has plunged the landscape into a harrowing gray pall.</description>
+		<letterText>A ritual has caused an unnatural gray pall.</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<canBePermanent>false</canBePermanent>
+		<weatherDef>GrayPall</weatherDef>
+		<natural>false</natural>
+	</GameConditionDef>
+	
+	<SitePartDef ParentName="ConditionCauserSitePartBase_Ritual">
+		<defName>BattIeBear_ForceWeatherRitual_GrayPall</defName>
+		<label>gray pall ritual</label>
+		<description>They are performing a dark ritual, causing an unnatural gray pall to shroud the land.</description>
+		<workerClass>BioSynth_SlavesOfHorax.SitePartWorker_ConditionCauser_Ritual_UnnaturalWeather</workerClass>
+		<conditionCauserDef>BattIeBear_ForceWeatherRitual_GrayPall</conditionCauserDef>
+		<excludesTags>
+			<li>Electrical</li>
+		</excludesTags>
+	</SitePartDef>
+
+	<GenStepDef ParentName="ConditionCauserGenStepBase_Ritual">
+		<defName>BattIeBear_ForceWeatherRitual_GrayPall</defName>
+		<linkWithSite>BattIeBear_ForceWeatherRitual_GrayPall</linkWithSite>
+	</GenStepDef>
+
+	 <!--========================= Force Death Pall =========================--> 
+	<ThingDef ParentName="ConditionCauserBase_Ritual">
+		<defName>BattIeBear_ForceWeatherRitual_DeathPall</defName>
+		<label>death pall ritual</label>
+		<description>A powerful ritual which causes an unnatural death pall to cover the land.</description>
+		<comps>
+			<li Class="BioSynth_SlavesOfHorax.CompProperties_CausesGameCondition_Ritual">
+				<conditionDef>BattIeBear_ForceWeatherRitual_DeathPall</conditionDef>
+				<worldRange>9</worldRange>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<GameConditionDef>
+		<defName>BattIeBear_ForceWeatherRitual_DeathPall</defName>
+		<conditionClass>BioSynth_SlavesOfHorax.GameCondition_ForceWeather_DeathPall</conditionClass>
+		<label>death pall ritual</label>
+		<description>A nearby ritual has plunged the landscape into a harrowing death pall.</description>
+		<letterText>A ritual has caused an unnatural death pall.</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<canBePermanent>false</canBePermanent>
+		<weatherDef>UnnaturalFog</weatherDef>
+		<natural>false</natural>
+	</GameConditionDef>
+
+	<SitePartDef ParentName="ConditionCauserSitePartBase_Ritual">
+		<defName>BattIeBear_ForceWeatherRitual_DeathPall</defName>
+		<label>death pall ritual</label>
+		<description>They are performing a dark ritual, causing an unnatural death pall to shroud the land.</description>
+		<workerClass>BioSynth_SlavesOfHorax.SitePartWorker_ConditionCauser_Ritual_UnnaturalWeather</workerClass>
+		<conditionCauserDef>BattIeBear_ForceWeatherRitual_DeathPall</conditionCauserDef>
+		<excludesTags>
+			<li>Electrical</li>
+		</excludesTags>
+	</SitePartDef>
+
+	<GenStepDef ParentName="ConditionCauserGenStepBase_Ritual">
+		<defName>BattIeBear_ForceWeatherRitual_DeathPall</defName>
+		<linkWithSite>BattIeBear_ForceWeatherRitual_DeathPall</linkWithSite>
+	</GenStepDef>
+
+	 <!--========================= Sightless Fog =========================--> 
+	<ThingDef ParentName="ConditionCauserBase_Ritual">
+		<defName>BattIeBear_SightlessFogRitual</defName>
+		<label>sightless fog ritual</label>
+		<description>A powerful ritual which causes an unnatural fog to cover the land. Half-seen silhouettes have been reported within.</description>
+		<comps>
+			<li Class="BioSynth_SlavesOfHorax.CompProperties_CausesGameCondition_Ritual">
+				<conditionDef>BattIeBear_SightlessFogRitual</conditionDef>
+				<worldRange>9</worldRange>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<GameConditionDef>
+		<defName>BattIeBear_SightlessFogRitual</defName>
+		<conditionClass>BioSynth_SlavesOfHorax.GameCondition_ForceWeather_SightlessFog</conditionClass>
+		<label>sightless fog ritual</label>
+		<description>A nearby ritual has plunged the landscape into an unnaturally thick fog. Half-seen silhouettes have been reported within.</description>
+		<letterText>A ritual has caused an unnaturally thick fog. Half-seen silhouettes have been reported within.</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<canBePermanent>false</canBePermanent>
+		<weatherDef>Fog</weatherDef>
+		<natural>false</natural>
+	</GameConditionDef>
+	
+	<SitePartDef ParentName="ConditionCauserSitePartBase_Ritual">
+		<defName>BattIeBear_SightlessFogRitual</defName>
+		<label>sightless fog ritual</label>
+		<description>They are performing a dark ritual, causing an unnaturally dense fog to shroud the land. Half-seen silhouettes have been reported within.</description>
+		<workerClass>BioSynth_SlavesOfHorax.SitePartWorker_ConditionCauser_Ritual_UnnaturalWeather</workerClass>
+		<conditionCauserDef>BattIeBear_SightlessFogRitual</conditionCauserDef>
+		<excludesTags>
+			<li>Electrical</li>
+		</excludesTags>
+	</SitePartDef>
+
+	<GenStepDef ParentName="ConditionCauserGenStepBase_Ritual">
+		<defName>BattIeBear_SightlessFogRitual</defName>
+		<linkWithSite>BattIeBear_SightlessFogRitual</linkWithSite>
+	</GenStepDef>
+
+</Defs>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{632DCAD4-5F19-49C5-947F-1706A9A1C88F}</ProjectGuid>
+    <LangVersion>8.0</LangVersion>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BioSynth_SlavesOfHorax</RootNamespace>
+    <AssemblyName>BioSynthetic - Slaves of Horax</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2009463077\1.4\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DefOf.cs" />
+    <Compile Include="Harmony\GasGrid_SetDirect_Patch.cs" />
+    <Compile Include="Harmony\HarmonyConstructor.cs" />
+    <Compile Include="Harmony\Hediff_PsychicTrance_ShouldRemove_Patch.cs" />
+    <Compile Include="Harmony\MutantUtility_ResurrectAsShambler_Patch.cs" />
+    <Compile Include="Harmony\RaidStrategyWorker_PsychicRitualSiege_LordJob_Prefix.cs" />
+    <Compile Include="Hediff\HediffCompProperties_BattIeBear_VoidMartyr.cs" />
+    <Compile Include="Hediff\HediffComp_BattIeBear_VoidMartyr.cs" />
+    <Compile Include="Hediff\HoraxGasMapComponenet.cs" />
+    <Compile Include="ProblemCauser_Ritual\CompCauseGameCondition_Ritual.cs" />
+    <Compile Include="ProblemCauser_Ritual\CompProperties_CausesGameCondition_Ritual.cs" />
+    <Compile Include="ProblemCauser_Ritual\GenStep_ConditionCauser_Ritual.cs" />
+    <Compile Include="ProblemCauser_Ritual\JobDriver_ConditionCauser_RitualLeader.cs" />
+    <Compile Include="ProblemCauser_Ritual\JobGiver_ConditionCauser_RitualLeader.cs" />
+    <Compile Include="ProblemCauser_Ritual\LordJob_ConditionCauser_Ritual.cs" />
+    <Compile Include="ProblemCauser_Ritual\LordToil_ConditionCauser_Ritual.cs" />
+    <Compile Include="ProblemCauser_Ritual\MindFracture_Ritual\GameCondition_PsychicEmanation_Ritual.cs" />
+    <Compile Include="ProblemCauser_Ritual\MindFracture_Ritual\ThoughtWorker_MindFracture_Ritual.cs" />
+    <Compile Include="ProblemCauser_Ritual\SitePartWorker_ConditionCauser_Ritual.cs" />
+    <Compile Include="ProblemCauser_Ritual\MindFracture_Ritual\SitePartWorker_ConditionCauser_Ritual_MindFracture.cs" />
+    <Compile Include="ProblemCauser_Ritual\SunFracture_Ritual\GameCondition_NoSunlight_Fractured.cs" />
+    <Compile Include="ProblemCauser_Ritual\SunFracture_Ritual\SitePartWorker_ConditionCauser_Ritual_SunFracture.cs" />
+    <Compile Include="ProblemCauser_Ritual\UnnaturalWeather_Ritual\GameCondition_ForceWeather_DeathPall.cs" />
+    <Compile Include="ProblemCauser_Ritual\UnnaturalWeather_Ritual\GameCondition_ForceWeather_SightlessFog.cs" />
+    <Compile Include="ProblemCauser_Ritual\UnnaturalWeather_Ritual\GameCondition_ForceWeather_Unnatural.cs" />
+    <Compile Include="ProblemCauser_Ritual\UnnaturalWeather_Ritual\SitePartWorker_ConditionCauser_Ritual_UnnaturalWeather.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PsychicRituals\ShamblerAssault\LordJob_BattIeBear_PsychicRitualRepeating.cs" />
+    <Compile Include="PsychicRituals\ShamblerAssault\PsychicRitualDef_BattIeBear_SummonShamblers_AI.cs" />
+    <Compile Include="PsychicRituals\ShamblerAssault\PsychicRitualToil_PsychicRitualDef_BattIeBear_SummonShamblers_AI.cs" />
+    <Compile Include="Settings\BioSynthSlavesOfHoraxSettingsWindow.cs" />
+    <Compile Include="Settings\BioSynthSlavesOfHoraxSettings.cs" />
+    <Compile Include="Settings\SlavesOfHoraxOptions.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

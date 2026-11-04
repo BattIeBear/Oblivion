@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="BioSynth_SlavesOfHorax.OnlyHoraxUsesBioferrite">
+		<HoraxOnly Class="PatchOperationSequence">
+			<operations>
+				<!--Hellcat Rifle-->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="Gun_HellcatRifle"]/weaponTags</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Gun_HellcatRifle"]</xpath>
+					<value>
+						<weaponTags Inherit="False">
+							<li>BattIeBear_Ranged_BioferriteHoraxian</li>
+						</weaponTags>
+					</value>
+				</li>
+				<!--Vanilla Weapons Expanded - Bioferrite-->
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Weapons Expanded - Bioferrite</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+
+							<li Class="PatchOperationRemove" MayRequire="VanillaExpanded.VWEHW">
+								<xpath>/Defs/ThingDef[defName="VWEB_HeavyIncinerator"]/weaponTags</xpath>
+							</li>
+							<li Class="PatchOperationAdd" MayRequire="VanillaExpanded.VWEHW">
+								<xpath>/Defs/ThingDef[defName="VWEB_HeavyIncinerator"]</xpath>
+								<value>
+									<weaponTags Inherit="False">
+										<li>BattIeBear_HeavyRanged_BioferriteHoraxian</li>
+									</weaponTags>
+								</value>
+							</li>
+
+							<li Class="PatchOperationRemove">
+								<xpath>/Defs/ThingDef[defName="VWEB_Gun_CycloneMinigun"]/weaponTags</xpath>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="VWEB_Gun_CycloneMinigun"]</xpath>
+								<value>
+									<weaponTags Inherit="False">
+										<li>BattIeBear_HeavyRanged_BioferriteHoraxian</li>
+									</weaponTags>
+								</value>
+							</li>
+
+							<li Class="PatchOperationRemove">
+								<xpath>/Defs/ThingDef[defName="VWEB_Gun_FlarestrikeRifle"]/weaponTags</xpath>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="VWEB_Gun_FlarestrikeRifle"]</xpath>
+								<value>
+									<weaponTags Inherit="False">
+										<li>BattIeBear_Ranged_BioferriteHoraxian</li>
+									</weaponTags>
+								</value>
+							</li>
+
+							<li Class="PatchOperationRemove">
+								<xpath>/Defs/ThingDef[defName="VWEB_Gun_FirestormShotgun"]/weaponTags</xpath>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="VWEB_Gun_FirestormShotgun"]</xpath>
+								<value>
+									<weaponTags Inherit="False">
+										<li>BattIeBear_Ranged_BioferriteHoraxian</li>
+									</weaponTags>
+								</value>
+							</li>
+
+							<!--Piercer Rifle does't need a remove class as it doesn't have weapons tags to begin with.-->
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="VWEB_Gun_PiercerRifle"]</xpath>
+								<value>
+									<weaponTags Inherit="False">
+										<li>BattIeBear_PiercerRifle_BioferriteHoraxian</li>
+									</weaponTags>
+								</value>
+							</li>
+
+						</operations>
+					</match>
+				</li>
+			</operations>
+		</HoraxOnly>
+	</Operation>
+
+</Patch>

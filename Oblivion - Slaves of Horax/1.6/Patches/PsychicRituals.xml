@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="BioSynth_SlavesOfHorax.AllowedPsychicRituals">
+		<NoShamblers Class="PatchOperationReplace">
+			<xpath>Defs/BioSynth_SlavesOfHorax.PsychicRitualDef_BattIeBear_SummonShamblers_AI[defName='BattIeBear_SummonShamblersAI']/aiCastable</xpath>
+			<value>
+				<aiCastable>false</aiCastable>
+			</value>
+		</NoShamblers>
+		<NoFlesh Class="PatchOperationReplace">
+			<xpath>Defs/PsychicRitualDef_SummonFleshbeasts[defName='SummonFleshbeasts']/aiCastable</xpath>
+			<value>
+				<aiCastable>true</aiCastable>
+			</value>
+		</NoFlesh>
+		<Neither Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/BioSynth_SlavesOfHorax.PsychicRitualDef_BattIeBear_SummonShamblers_AI[defName='BattIeBear_SummonShamblersAI']/aiCastable</xpath>
+					<value>
+						<aiCastable>false</aiCastable>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PsychicRitualDef_SummonFleshbeasts[defName='SummonFleshbeasts']/aiCastable</xpath>
+					<value>
+						<aiCastable>true</aiCastable>
+					</value>
+				</li>
+			</operations>
+		</Neither>
+	</Operation>
+
+</Patch>

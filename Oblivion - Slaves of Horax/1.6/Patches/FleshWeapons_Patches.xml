@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!--Twisted Flesh Weaponry - Horax Cult Raiding-->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Twisted Flesh Weaponry - Horax Cult Raiding</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="TFW_TwistedDoubleBarrel"]/weaponTags</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="TFW_TwistedDoubleBarrel"]</xpath>
+					<value>
+						<weaponTags Inherit="False">
+							<li>BattIeBear_Ranged_TwistedFleshHoraxian</li>
+						</weaponTags>
+					</value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="TFW_TwistedFlintlock"]/weaponTags</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="TFW_TwistedFlintlock"]</xpath>
+					<value>
+						<weaponTags Inherit="False">
+							<li>BattIeBear_SimpleRanged_TwistedFleshHoraxian</li>
+						</weaponTags>
+					</value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="TFW_TwistedBlunderbussPistol"]/weaponTags</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="TFW_TwistedBlunderbussPistol"]</xpath>
+					<value>
+						<weaponTags Inherit="False">
+							<li>BattIeBear_SimpleRanged_TwistedFleshHoraxian</li>
+						</weaponTags>
+					</value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="TFW_TwistedFlintlockPistol"]/weaponTags</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="TFW_TwistedFlintlockPistol"]</xpath>
+					<value>
+						<weaponTags Inherit="False">
+							<li>BattIeBear_SimpleRanged_TwistedFleshHoraxian</li>
+						</weaponTags>
+					</value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="TFW_TwistedLongSword"]/weaponTags</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="TFW_TwistedLongSword"]</xpath>
+					<value>
+						<weaponTags Inherit="False">
+							<li>BattIeBear_Melee_TwistedFleshHoraxian</li>
+						</weaponTags>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ModMetaData>
+	<name>Oblivion: Slaves of Horax</name>
+	<author>BattIeBear</author>
+	<packageId>BattIeBear.Oblivion.SlavesOfHorax</packageId>
+	<supportedVersions>
+		<li>1.6</li>
+		<li>1.7</li>
+	</supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>Ludeon.RimWorld.Anomaly</packageId>
+			<displayName>Anomaly</displayName>
+			<steamWorkshopUrl>https://store.steampowered.com/app/2380740</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>
+	</modDependencies>
+	<description>V1.7
+The first of a new series of mods that will finally integrate Anomaly with the rest of RimWorld!
+
+Slaves of Horax makes changes to the Horax Cult, making them appear on the map like any other faction, have new cultist types to stop each raid being identical, allow them to use ghouls, allow them to worship Sanguophages, and more!
+
+The main focus of the mod are the new rituals, which ensure psychic sieges each offer a unique challenge, and, with Royalty installed, create off-map ritual sites that affect the whole region!
+
+Finally, this mod is designed to create a foundation for future mods in the Oblivion series, specifically creating compatibility between this mod, "Twisted Flesh Weaponry - Horax Cult Raiding," "Vanilla Weapons Expanded - Bioferrite," and "Blessed by Horax" as a default.
+
+As always, as much as possible is toggleable, meaning you can have everything mentioned above or turn it all off one-by-one!
+
+Found an issue? Like my mod? Leave a comment!
+	</description>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li> <!-- ritual conditionCausers -->
+		<li>Ludeon.RimWorld.Ideology</li> <!-- styles -->
+		<li>Ludeon.RimWorld.Biotech</li> <!-- xenotypes -->
+		<li>Ludeon.RimWorld.Anomaly</li> <!-- requirement -->
+		<li>Ludeon.RimWorld.Odyssey</li> <!-- landmarks -->
+		<li>VanillaExpanded.VWEBF</li> <!-- For new weapons-->
+		<li>VanillaExpanded.VWEHW</li> <!-- For compatibility w/ above-->
+		<li>IvanM.TwistedFW</li> <!-- For new weapons-->
+		<li>vanillaracesexpanded.sanguophage</li> <!-- For Sanguophage Compatibility-->
+		<li>metalocif.cultbuffs</li> <!-- For "Blessings"-->
+	</loadAfter>
+</ModMetaData>

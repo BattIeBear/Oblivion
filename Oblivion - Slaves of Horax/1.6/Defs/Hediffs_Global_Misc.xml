@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<HediffDef>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defName>BattIeBear_VoidMartyr</defName>
+		<label>void martyr</label>
+		<description>Infested with a swarm of mechanites, upon death releases a cloud of deadlife dust that will raise friend and foe as shamblers under Horax.</description>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="BioSynth_SlavesOfHorax.HediffCompProperties_BattIeBear_VoidMartyr" />
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>
+	</HediffDef>
+
+</Defs>
